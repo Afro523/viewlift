@@ -1,0 +1,104 @@
+body{
+    background-color: grey;
+}
+
+/* Login.jsx */
+
+#form{
+    background-color: lightgrey;
+    border-radius: 4px;
+    font-size:20px;
+    position: absolute;
+    left:25%;
+    top:25%;
+    width: 50%;
+    text-align: center;
+}
+
+#error{
+    color:red;
+}
+
+/* Home.jsx */
+#movie-title{
+    font-size:40px;
+}
+
+@media only screen and (max-width : 768px) {
+    #movie-title{
+        font-size:30px;
+    }
+}
+
+/* MovieContainer.jsx */
+.grid-container{
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+
+
+#loader{
+    position: absolute;
+    top:25%;
+    left:25%;
+}
+
+#loader div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin: 6px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: blue transparent transparent transparent;
+}
+#loader div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+#loader div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+#loader div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes loading-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+  
+@media only screen and (max-width : 768px) {
+    .grid-container{
+        grid-column-gap: 20px;
+        grid-row-gap: 25px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Movie.jsx */
+.movie-item{
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.movie-img{
+    width:100%;
+}
+
+.movie-title{
+    font-size:20px;
+}
+
+@media only screen and (max-width : 768px) {
+    .movie-title{
+        font-size:16px;
+    }
+}
